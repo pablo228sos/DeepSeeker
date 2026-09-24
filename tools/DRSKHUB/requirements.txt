@@ -1,0 +1,8 @@
+PyQt6>=6.6.0
+PyQt6-WebEngine>=6.6.0
+pymavlink>=2.4.41
+opencv-python>=4.9.0
+PyYAML>=6.0
+numpy>=1.26.0
+requests>=2.31.0
+pyserial>=3.5

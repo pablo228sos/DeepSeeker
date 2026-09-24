@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "missionName": "Lake Test Example",
+  "createdAt": "2026-07-13T00:00:00.000Z",
+  "speedPercent": 35,
+  "arrivalRadiusMeters": 3,
+  "waypointSpacingMeters": 8,
+  "home": {
+    "lat": 42.641314,
+    "lng": 77.073812
+  },
+  "controlPoints": [
+    {
+      "id": 1,
+      "lat": 42.641314,
+      "lng": 77.073812
+    },
+    {
+      "id": 2,
+      "lat": 42.64145,
+      "lng": 77.07405
+    },
+    {
+      "id": 3,
+      "lat": 42.64162,
+      "lng": 77.07422
+    }
+  ],
+  "waypoints": [
+    {
+      "id": 1,
+      "lat": 42.641314,
+      "lng": 77.073812
+    },
+    {
+      "id": 2,
+      "lat": 42.641382,
+      "lng": 77.073931
+    },
+    {
+      "id": 3,
+      "lat": 42.64145,
+      "lng": 77.07405
+    },
+    {
+      "id": 4,
+      "lat": 42.641535,
+      "lng": 77.074135
+    },
+    {
+      "id": 5,
+      "lat": 42.64162,
+      "lng": 77.07422
+    }
+  ]
+}

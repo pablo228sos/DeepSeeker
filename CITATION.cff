@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If DeepSeeker or its field dataset supports your work, please cite this repository and the accompanying paper."
+title: "DeepSeeker: A Field-Evaluated Embedded Catamaran for Synchronized Shallow-Water Imaging and Coverage Guidance at Lake Issyk-Kul"
+type: software
+version: 1.0.0
+date-released: 2026-07-18
+authors:
+  - family-names: Bakasov
+    given-names: Abai
+  - family-names: Muratbekova
+    given-names: Aikanysh
+  - family-names: Takhirov
+    given-names: Najmidin
+  - family-names: Farmonov
+    given-names: Sharifjon
+  - family-names: Muratoz
+    given-names: Dinislam
+  - family-names: Li
+    given-names: Zhuoyin
+keywords:
+  - autonomous surface vehicle
+  - underwater imaging
+  - ESP32
+  - GNSS
+  - orthomosaic
+  - Lake Issyk-Kul
+license: Apache-2.0

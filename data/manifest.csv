@@ -1,0 +1,7 @@
+path,bytes,sha256,description
+data/M0014/raw/M0014.rar,13294479,BA4A1C112736E08702616C6AB930A494A49F619EF34BA573F4E8E53AD7749256,"Raw M0014 mission: 362 JPEG files, telemetry.csv, geo.txt"
+data/M0016/raw/M0016.rar,18635062,5705723AE2B75020B1637DCB7A9E70B1F2079C287B76FB3C2334B171CFB6E6CD,"Raw M0016 mission: 208 JPEG files, telemetry.csv, geo.txt"
+research/DeepSeeker_Final_Submission_Mobile_Safe.pdf,3503102,C8F27DE1D622F0AF2B6F274EB7D5CF34CFF6D214DBA2E0ACC05175EF3268A08E,"Final 21-page project paper"
+firmware/main-controller/main_esp32_autonomy_v6_0_interlaced_teardrop/main_esp32_autonomy_v6_0_interlaced_teardrop.ino,119202,4769F74A7CF98ABFE57538EE07BA6F6F1CFE91541C1CC38C8E906998A2B6FE74,"Final integrated main-controller snapshot"
+firmware/camera-controller/esp32_s3_camera_mission_v2_2_sd_retry/esp32_s3_camera_mission_v2_2_sd_retry.ino,44100,81C38B95F35C956E766CC2CB21065E45BCFEF55C3C4F210F5D65BA9169C28483,"Final camera-controller snapshot"
+firmware/field-mode/main_esp32_10x10_manual_orthophoto_v1_0/main_esp32_10x10_manual_orthophoto_v1_0.ino,109425,F8F8C6762312A16965BB1BA3995CF3F68178AD69C21D1B1865D5B120B11834ED,"Manual 10 x 10 m orthophoto field mode"

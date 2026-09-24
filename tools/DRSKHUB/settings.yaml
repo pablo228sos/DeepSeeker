@@ -1,0 +1,11 @@
+app:
+  theme: dark
+  refresh_rate_hz: 5
+map:
+  default_lat: 41.0082
+  default_lon: 28.9784
+  default_zoom: 14
+  tile_layer: dark
+simulation:
+  base_port: 14550
+  count: 6

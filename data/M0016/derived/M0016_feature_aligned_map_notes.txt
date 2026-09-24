@@ -1,0 +1,10 @@
+M0016 FEATURE-ALIGNED MAP
+
+This reconstruction was produced from the outbound image sequence using frame-to-frame
+geometric registration. Neighboring frames were aligned using local image gradients and
+Euclidean image transforms. Only after alignment were central image regions blended.
+
+The output is a connected reconstruction of one underwater transect. It is not a complete
+10 × 10 m orthophotoplan because the mission contained only one forward-and-return corridor.
+Remaining softness is present in the original images due to turbidity, moving sunlight
+patterns, focus limitations, and non-planar underwater refraction.

@@ -1,0 +1,16 @@
+* text=auto eol=lf
+*.ino text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+
+# Raw mission archives are kept with Git LFS.
+*.rar filter=lfs diff=lfs merge=lfs -text
+
+# Binary research and hardware artifacts
+*.pdf binary
+*.stl binary
+*.jpg binary
+*.png binary

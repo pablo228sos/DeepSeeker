@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Arduino and PlatformIO
+.pio/
+build/
+*.elf
+*.bin
+*.map
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Generated analysis output
+analysis/output/
+
+# Secrets and local configuration
+secrets.h
+wifi_credentials.h
+.env
+.env.*
+!.env.example

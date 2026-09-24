@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaRoute Mission Planner</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIINfQ3ynK8mZSS+2AGyQpGpD4ZxjfvxZXc="
+        crossorigin="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">AR</div>
+        <div>
+          <h1>AquaRoute</h1>
+          <p>Mission Planner v1.0</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <h2>Параметры миссии</h2>
+
+        <label>
+          Название
+          <input id="missionName" type="text" value="Lake Test 01" maxlength="60" />
+        </label>
+
+        <div class="grid-2">
+          <label>
+            Скорость, %
+            <input id="speed" type="number" min="5" max="100" value="35" />
+          </label>
+          <label>
+            Радиус точки, м
+            <input id="arrivalRadius" type="number" min="1" max="20" step="0.5" value="3" />
+          </label>
+        </div>
+
+        <label>
+          Шаг автоточек, м
+          <input id="spacing" type="number" min="2" max="100" value="8" />
+        </label>
+
+        <div class="hint">
+          Клик по карте добавляет точку. Маркеры можно перетаскивать. Правый клик удаляет точку.
+        </div>
+      </section>
+
+      <section class="panel stats">
+        <h2>Маршрут</h2>
+        <div><span>Контрольных точек</span><strong id="controlCount">0</strong></div>
+        <div><span>Точек для ESP32</span><strong id="generatedCount">0</strong></div>
+        <div><span>Общая длина</span><strong id="routeLength">0 м</strong></div>
+        <div><span>Примерное время</span><strong id="estimatedTime">—</strong></div>
+      </section>
+
+      <section class="panel">
+        <h2>Действия</h2>
+        <div class="button-grid">
+          <button id="undoBtn" class="secondary">Отменить точку</button>
+          <button id="reverseBtn" class="secondary">Развернуть маршрут</button>
+          <button id="clearBtn" class="danger">Очистить</button>
+          <button id="centerBtn" class="secondary">Показать весь маршрут</button>
+        </div>
+
+        <button id="exportBtn" class="primary full">Скачать mission.json</button>
+
+        <label class="file-button">
+          Загрузить mission.json
+          <input id="importInput" type="file" accept=".json,application/json" />
+        </label>
+      </section>
+
+      <section class="panel mission-preview">
+        <h2>Проверка перед запуском</h2>
+        <div id="validation" class="validation neutral">Добавьте минимум две точки.</div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <strong>Редактор маршрута катамарана</strong>
+          <span id="statusText">Маршрут не создан</span>
+        </div>
+        <div class="legend">
+          <span><i class="dot start"></i> Старт</span>
+          <span><i class="dot waypoint"></i> Контрольная точка</span>
+          <span><i class="dot finish"></i> Финиш</span>
+        </div>
+      </header>
+
+      <div id="map"></div>
+
+      <div class="map-toolbar">
+        <button id="setHomeBtn" class="secondary">Назначить первую точку HOME</button>
+        <button id="copyJsonBtn" class="secondary">Копировать JSON</button>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
