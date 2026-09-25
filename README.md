@@ -128,7 +128,7 @@ Start with:
 
 ## Team
 
-DeepSeeker was developed by **Abai Bakasov, Aikanysh Muratbekova, Najmidin Takhirov, Sharifjon Farmonov, Dinislam Muratoz, and Zhuoyin Li** during the Young Scientists Camp 2026.
+DeepSeeker was developed by **Abai Bakasov, Aikanysh Muratbekova, Najmidin Takhirov, Sharifjon Farmonov, Dinislam Muratov, and Zhuoyin Li** during the Young Scientists Camp 2026.
 
 ## License and citation
 
