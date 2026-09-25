@@ -1,0 +1,45 @@
+name: Field-test report
+description: Record a repeatable land, tethered-water, or mission test.
+title: "[Field test]: "
+labels:
+  - field-test
+body:
+  - type: input
+    id: mission
+    attributes:
+      label: Mission or test ID
+      placeholder: M0017 or bench-2026-09-25
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Hardware and firmware configuration
+      description: Include controller versions, sensors, power source, and relevant calibration.
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Conditions
+      description: Location, weather, waves, water clarity, depth, and camera height where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: procedure
+    attributes:
+      label: Procedure
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Measured results and attached evidence
+    validations:
+      required: true
+  - type: textarea
+    id: failures
+    attributes:
+      label: Failures, interventions, and limitations
+    validations:
+      required: true

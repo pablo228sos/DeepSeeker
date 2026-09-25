@@ -1,0 +1,36 @@
+name: Firmware builds
+
+on:
+  push:
+    paths:
+      - "firmware/**"
+      - ".github/workflows/firmware.yml"
+  pull_request:
+    paths:
+      - "firmware/**"
+      - ".github/workflows/firmware.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/setup-arduino-cli@v2
+      - name: Install ESP32 core and libraries
+        run: |
+          arduino-cli config init --overwrite
+          arduino-cli config add board_manager.additional_urls https://espressif.github.io/arduino-esp32/package_esp32_index.json
+          arduino-cli core update-index
+          arduino-cli core install esp32:esp32@3.3.10
+          arduino-cli lib install TinyGPSPlus@1.0.3
+          arduino-cli lib install ESP32Servo@3.2.1
+      - name: Compile main controller
+        run: arduino-cli compile --fqbn esp32:esp32:esp32 firmware/main-controller/main_esp32_autonomy_v6_0_interlaced_teardrop
+      - name: Compile field mode
+        run: arduino-cli compile --fqbn esp32:esp32:esp32 firmware/field-mode/main_esp32_10x10_manual_orthophoto_v1_0
+      - name: Compile camera controller
+        run: arduino-cli compile --fqbn esp32:esp32:esp32s3 firmware/camera-controller/esp32_s3_camera_mission_v2_2_sd_retry

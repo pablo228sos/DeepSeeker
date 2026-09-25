@@ -1,0 +1,53 @@
+name: Software or firmware bug
+description: Report reproducible behavior in firmware, analysis, or tools.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Subsystem
+      options:
+        - Main ESP32 firmware
+        - ESP32-S3 camera firmware
+        - Analysis
+        - AquaRoute
+        - DRSKHUB
+        - Documentation
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v1.0.0 or commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Include exact messages, timing, and hardware state.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduction and evidence
+      description: List steps and attach the smallest useful log, telemetry extract, or image sample.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: Motor tests were performed safely or were not involved.
+          required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Safety and security policy
+    url: https://github.com/pablo228sos/DeepSeeker/security/policy
+    about: Read this before reporting a control or credential vulnerability.
